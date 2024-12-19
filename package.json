@@ -1,0 +1,23 @@
+{
+  "name": "jaja-test-action",
+  "version": "1.0.0",
+  "description": "GitHub Action in TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "package": "ncc build --source-map --license licenses.txt",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.3.3"
+  }
+}
