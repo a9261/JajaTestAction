@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: ['master']
+  pull_request:
+    branches: ['master']
+  workflow_dispatch:
+
+jobs:
+  second_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run a one-line script
+        uses: ./my-action
+        with:
+          who-togreet: "i am jaja"

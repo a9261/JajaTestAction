@@ -34,24 +34,25 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(require("@actions/core"));
-const github = __importStar(require("@actions/github"));
 try {
     // Fetch the value of the input 'who-to-greet' specified in action.yml
     const nameToGreet = core.getInput('who-to-greet');
     console.log(`Hello ${nameToGreet}!`);
     // Record the time of greeting as an output
-    const time = new Date().toTimeString();
-    core.setOutput("time", time);
+    //  const time: string = new Date().toTimeString();
+    // core.setOutput("time", time);
     // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(github.context.payload, undefined, 2);
-    console.log(`The event payload: ${payload}`);
+    // const payload: any = JSON.stringify(github.context.payload, undefined, 2);
+    // console.log(`The event payload: ${payload}`);
+    console.log('tset');
 }
 catch (error) {
     // Handle errors and indicate failure
     if (error instanceof Error) {
-        core.setFailed(error.message);
+        // core.setFailed(error.message);
     }
     else {
-        core.setFailed('An unknown error occurred');
+        // core.setFailed('An unknown error occurred');
     }
 }
+//# sourceMappingURL=index.js.map
